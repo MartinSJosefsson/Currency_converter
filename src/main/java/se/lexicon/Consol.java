@@ -1,14 +1,16 @@
 package se.lexicon;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Scanner;
 
 public class Consol {
     // todo: needs completion
 
     public static void displayMenu() {
-
         System.out.println("Welcome to my currency converter");
+        System.out.println("________________________________");
+        System.out.println("Exchange Rate as of:"+ LocalDate.now() + " :");
         System.out.println("________________________________");
         System.out.println("1: SEK to USD");
         System.out.println("2: USD to SEK");
@@ -19,7 +21,7 @@ public class Consol {
 
     }
 
-    public static void displayRates() {
+    public static void displayDates() {
         System.out.println("________________________________");
         System.out.println("Exchange Rate as of" + LocalDate.now() + " :");
 
