@@ -10,14 +10,14 @@ public class Consol {
     public static void displayMenu() {
         System.out.println("Welcome to my currency converter");
         System.out.println("________________________________");
-        System.out.println("Exchange Rate as of:"+ LocalDate.now() + " :");
+        System.out.println("Exchange Rate as of: " + LocalDate.now() + " :");
         System.out.println("________________________________");
         System.out.println("1: SEK to USD");
         System.out.println("2: USD to SEK");
         System.out.println("3: SEK to Euro");
         System.out.println("4: Euro to SEK");
         System.out.println("0: Close converter");
-        System.out.println("Choose currency exchange: ");
+
 
     }
 
@@ -63,7 +63,7 @@ public class Consol {
 
         while (true) {
             Consol.displayMenu();
-            System.out.println("Enter operation:");
+            System.out.println("Choose currency exchange: ");
             Scanner scanner = new Scanner(System.in);
             int operation = scanner.nextInt();
 
@@ -71,10 +71,12 @@ public class Consol {
                 // call the method to ask do you want to continue or no ...
                 break;
             }
+
             Consol.performOperations(operation);
 
-
         }
+
+
     }
 
 
