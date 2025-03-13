@@ -27,7 +27,7 @@ public class Consol {
     }
 
     public static void performOperations(int operationNumber) {
-        double sekAmount, usdAmount;
+        double sekAmount, usdAmount, euroAmount;
         Scanner scanner = new Scanner(System.in);
 
         switch (operationNumber) {
@@ -35,6 +35,21 @@ public class Consol {
                 System.out.println("Enter amount: ");
                 sekAmount = scanner.nextDouble();
                 System.out.println( Converter.convertSekToUsd(sekAmount));
+                break;
+            case 2:
+                System.out.println("Enter amount: ");
+                usdAmount = scanner.nextDouble();
+                System.out.println( Converter.convertUsdToSek(usdAmount));
+                break;
+            case 3:
+                System.out.println("Enter amount: ");
+                sekAmount = scanner.nextDouble();
+                System.out.println( Converter.convertSekToEuro(sekAmount));
+                break;
+            case 4:
+                System.out.println("Enter amount: ");
+                euroAmount = scanner.nextDouble();
+                System.out.println( Converter.convertEuroToSek(euroAmount));
                 break;
 
 
