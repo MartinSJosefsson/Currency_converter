@@ -36,22 +36,22 @@ public class Consol {
             case 1:
                 System.out.println("Enter amount: ");
                 sekAmount = scanner.nextDouble();
-                System.out.println( Converter.convertSekToUsd(sekAmount));
+                System.out.println("USD: " + Converter.convertSekToUsd(sekAmount));
                 break;
             case 2:
                 System.out.println("Enter amount: ");
                 usdAmount = scanner.nextDouble();
-                System.out.println( Converter.convertUsdToSek(usdAmount));
+                System.out.println("SEK: " + Converter.convertUsdToSek(usdAmount));
                 break;
             case 3:
                 System.out.println("Enter amount: ");
                 sekAmount = scanner.nextDouble();
-                System.out.println( Converter.convertSekToEuro(sekAmount));
+                System.out.println("Euro: " + Converter.convertSekToEuro(sekAmount));
                 break;
             case 4:
                 System.out.println("Enter amount: ");
                 euroAmount = scanner.nextDouble();
-                System.out.println( Converter.convertEuroToSek(euroAmount));
+                System.out.println("SEK: " + Converter.convertEuroToSek(euroAmount));
                 break;
 
 
@@ -59,7 +59,7 @@ public class Consol {
     }
 
 
-    public static void start(){
+    public static void start() {
 
         while (true) {
             Consol.displayMenu();
@@ -73,6 +73,12 @@ public class Consol {
             }
 
             Consol.performOperations(operation);
+
+            System.out.println("Do you want to continue(y,n): ");
+            String input = scanner.next();
+            if (input.equalsIgnoreCase("n") || input.equalsIgnoreCase("no")) {
+                break;
+            }
 
         }
 
